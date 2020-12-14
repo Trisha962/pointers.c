@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main() {
+    int r, c, *a[3][3], *b[3][3], i, j, sum=0;;
+    printf("Enter the number of rows : ");
+    scanf("%d", &r);
+    printf("Enter the number of columns: ");
+    scanf("%d", &c);
+
+    printf("\nEnter elements of 1st matrix:\n");
+    for (i = 0; i < r; ++i)
+        for (j = 0; j < c; ++j)
+		 {
+            printf("Enter element a%d%d: ", i + 1, j + 1);
+            scanf("%d", &a[i][j]);
+        }
+            printf("\n");
+    
+    
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            if(i==j)
+            {
+                sum=sum+*a[i][j]+*b[i][j];
+            }
+        }
+    }
+ 
+    printf("The sum of diagonal elements of a square matrix = %d\n",sum);
+}
+    
